@@ -35,19 +35,23 @@ H.on('NAVIGATE_IN', ({to, location}) => {
             const path = link.href.split('/');
             if (path[path.length - 1] === "") {
                 // if we are in homePage, let's go to animate navbar.
-                tl.fromTo(nav, {top: '0%'}, {
-                    top: '25%', onComplete: function () {
-                        wasAnimated = true
-                    }
-                })
+                tl.fromTo(nav, {opacity: '1'}, {opacity: '0'})
+                    .fromTo(nav, {top: '0%'}, {top: '25%'})
+                    .fromTo(nav, {opacity: '0'}, {
+                        opacity: '1', onComplete: function () {
+                            wasAnimated = true
+                        }
+                    })
             } else {
                 // else if navbar has been animated, it come back to initial position.
                 if (wasAnimated === true)
-                    tl.fromTo(nav, {top: '25%'}, {
-                        top: '0%', onComplete: function () {
-                            wasAnimated = false
-                        }
-                    })
+                    tl.fromTo(nav, {opacity: '1'}, {opacity: '0'})
+                        .fromTo(nav, {top: '25%'}, {top: '0%'})
+                        .fromTo(nav, {opacity: '0'}, {
+                            opacity: '1', onComplete: function () {
+                                wasAnimated = false
+                            }
+                        })
             }
         }
     }
