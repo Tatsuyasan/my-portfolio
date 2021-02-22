@@ -4,23 +4,11 @@ import {CustomEase} from 'gsap/CustomEase';
 
 gsap.registerPlugin(CustomEase);
 
-class HomeTransition extends Highway.Transition {
+class BioTransition extends Highway.Transition {
     in({from, to, done}) {
-        const viewName = from.getAttribute('data-router-view')
-        let directionTransition
         const tl = new TimelineLite();
-
-        switch (viewName) {
-            case 'bio':
-                directionTransition = '100%'
-                break;
-            case 'contact':
-                directionTransition = '-100%'
-                break;
-        }
-
         tl.fromTo(to,
-            {left: directionTransition},
+            {left: '-100%'},
             {
                 left: '0%',
                 duration: 1.5,
@@ -29,12 +17,12 @@ class HomeTransition extends Highway.Transition {
                     from.remove();
                     done();
                 }
-            })
+            });
     }
 
     out({from, done}) {
-        done()
+        done();
     }
 }
 
-export default HomeTransition;
+export default BioTransition;

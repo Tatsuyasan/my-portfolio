@@ -1,21 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="style/style.scss">
-        <title>Document</title>
-    </head>
-    <body>
-        <main data-router-wrapper>
-            <section data-router-view="bio" class="bio">
-                <h1>BIO</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt distinctio excepturi fugiat, iure
-                    laboriosam possimus quidem sed? Cupiditate excepturi labore magnam porro repellendus vel veniam voluptatem.
-                    Eligendi officia soluta sunt.</p>
-            </section>
-        </main>
-        <script src="./js/index.js"></script>
-    </body>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/style.scss">
+    <title>Document</title>
+</head>
+<body>
+<main data-router-wrapper>
+    <section data-router-view="bio" class="bio">
+        <div class="bio-container">
+            <div class="bio-aside">
+                <p class="bio-title">
+                    <span class="h"><span class="iam">i'm</span> vincent</span>
+                    <span class="h">vermeersch</span>
+                </p>
+                <p class="bio-description">
+                    <span class="h">I’m a French front-end developer based in Lille and</span>
+                    <span class="h">I love building useful and creative interfaces.</span>
+                    <span class="h">I can speak many languages like,</span>
+                    <span class="h">HTML5, CSS, Javascript, PHP, Java Android.</span>
+                    <span class="h">I can speak if needed with API and others back features.</span>
+                </p>
+            </div>
+            <div class="bio-image"></div>
+        </div>
+        <div class="btn-project">
+            <a class="btn-new-project" href="#">new project ?</a>
+            <span class="animate-text">hire me - hire me - hire me - </span>
+        </div>
+    </section>
+</main>
+<script id="main-script" src="./js/index.js"></script>
+</body>
 </html>
