@@ -9,4 +9,12 @@
 
 body {
   overflow-x: hidden;
+
+  &::-webkit-scrollbar{
+    display: none;
+  }
+}
+
+.in-transition{
+  overflow: hidden;
 }

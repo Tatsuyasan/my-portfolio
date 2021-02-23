@@ -1,19 +1,23 @@
 import charming from 'charming'
-import Highway from '@dogstudio/highway';
 import {TweenLite} from "gsap";
+import defaultRender from "./defaultRender";
 
-export default class BioRender extends Highway.Renderer {
+export default class BioRender extends defaultRender {
     onEnter() {
+        super.onEnter();
         hireMeButton();
     }
 
     onLeave() {
+        super.onLeave();
     }
 
     onEnterCompleted() {
+        super.onEnterCompleted();
     }
 
     onLeaveCompleted() {
+        super.onLeaveCompleted();
     }
 }
 

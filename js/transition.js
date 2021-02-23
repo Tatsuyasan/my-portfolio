@@ -4,10 +4,13 @@ import HomeTransition from './page_transition/homeTransition';
 import ContactTransition from './page_transition/contactTransition';
 import {TimelineLite} from "gsap";
 import BioRender from "./render/bioRender";
+import DefaultRender from "./render/defaultRender";
 
 const H = new Highway.Core({
     renderers: {
-        bio: BioRender
+        bio: BioRender,
+        home: DefaultRender,
+        contact: DefaultRender
     },
     transitions: {
         home: HomeTransition,
