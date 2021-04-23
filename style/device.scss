@@ -1,0 +1,139 @@
+$heightNavBar: 8vh;
+
+@media (max-width: 700px) {
+  // general
+  body .contact,
+  body .home-content,
+  body .bio {
+    padding: 0;
+  }
+
+  section.home .home-content,
+  section.contact,
+  section.bio {
+    height: 100vh - $heightNavBar;
+  }
+
+  // home mobile part
+  body .home {
+  }
+
+  // contact mobile part
+  body .contact {
+    .contact-container {
+      p.contact-title {
+        font-size: 10vw;
+
+        > .h {
+          margin: -3.5vw 0 0;
+          line-height: 10vw;
+
+          .get {
+            margin: -2vw -4vw 0 0;
+            font-size: 14vw;
+            line-height: 14vw;
+          }
+        }
+      }
+
+      p.contact-description {
+        margin: 3.6vw 0 0 0;
+
+        > .h {
+          font-size: 2.2vw;
+        }
+      }
+
+      p.contact-link {
+        margin: 2vw 0 0 0;
+
+        > .h {
+          font-size: 2vw;
+        }
+      }
+    }
+  }
+
+  // bio mobile part
+  body .bio {
+    .bio-container {
+      flex-flow: column nowrap;
+      .bio-aside {
+        margin: -100px 3vw 0 3vw;
+        order: 1;
+        p.bio-title {
+          font-size: 10vw;
+          > .h {
+            margin: -3.7vw 0 0;
+            line-height: 10vw;
+
+            .iam {
+              font-size: 14vw;
+              line-height: 14vw;
+            }
+          }
+        }
+
+        p.bio-description {
+          margin: 4vw 0 0 0;
+          font-size: 3vw;
+
+          > .h {
+            margin: -0.4vw 0 0;
+            line-height: 3.6vw;
+          }
+        }
+      }
+
+      .bio-image {
+        flex: 2;
+      }
+    }
+  }
+
+  // navigation mobile part
+  .nav-container {
+    position: fixed;
+    height: $heightNavBar;
+    width: 100vw;
+    background: black;
+    bottom: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+
+    .nav-list {
+      width: 100%;
+      justify-content: space-around;
+
+      a.is-active::before {
+        background: #e8e6de;
+        top: 50%;
+        margin-top: 0;
+        transform: translateY(-50%);
+      }
+      li,
+      li:last-child,
+      li:nth-child(2) {
+        margin-left: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .nav-link:after,
+        .nav-link.is-active:after,
+        .nav-link:hover:after {
+          background: #e8e6de;
+        }
+        a {
+          color: #e8e6de;
+          font-size: 2.8333333333333334vw;
+        }
+      }
+    }
+  }
+
+  .work-content {
+    margin-top: $heightNavBar;
+  }
+}

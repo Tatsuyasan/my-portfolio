@@ -1,33 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script id="main-script" src="./js/index.js" defer></script>
     <link rel="stylesheet" href="style/style.scss">
     <title>Document</title>
 </head>
-<body>
-<main data-router-wrapper>
-    <section data-router-view="contact" class="contact">
-        <div class="contact-container">
-            <p class="contact-description">
-                <span class="h"><span class="get">get</span> in</span>
-                <span class="h">touch</span>
-            </p>
-            <p class="contact-info">
-                <span class="h">BUSINESS INQUIRIES</span>
-                <span class="h"><a href="mailto:">hello@vincentvermeersch.com</a></span>
-                <span class="h">Available from February 2021</span>
-            </p>
-            <p class="contact-link">
-                <span class="h"><a href="">instagram</a></span>
-                <span class="h"><a href="">dribbble</a></span>
-                <span class="h"><a href="">Linkedin</a></span>
-            </p>
-        </div>
-    </section>
-</main>
-<script src="./js/index.js"></script>
+
+<body style="overflow: hidden">
+    <nav class="nav-container light">
+        <ul class="nav-list">
+            <li><a class="nav-link" href="./bio.html">BIO</a></li>
+            <li><a class="nav-link" href="./">WORK</a></li>
+            <li><a class="nav-link is-active" href="./contact.html">CONTACT</a></li>
+        </ul>
+    </nav>
+    <main data-router-wrapper>
+        <section data-router-view="contact" class="contact">
+            <div class="contact-container">
+                <p class="contact-title">
+                    <span class="h"><span class="get">get</span> in</span>
+                    <span class="h">touch</span>
+                </p>
+                <p class="contact-description">
+                    <span class="h">BUSINESS INQUIRIES</span>
+                    <span class="h"><a
+                            href="mailto:vincent.vermeersch2@gmail.com">vincent.vermeersch2@gmail.com</a></span>
+                    <span class="h">Available from February 2021</span>
+                </p>
+                <p class="contact-link">
+                    <span class="h"><a href="">instagram</a></span>
+                    <span class="h"><a href="">dribbble</a></span>
+                    <span class="h"><a target="_blank"
+                            href="https://www.linkedin.com/in/vincent-vermeersch-6461b4195">Linkedin</a></span>
+                </p>
+            </div>
+        </section>
+    </main>
 </body>
+
 </html>

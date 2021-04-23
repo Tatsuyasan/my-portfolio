@@ -1,37 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script id="main-script" src="./js/index.js" defer></script>
     <link rel="stylesheet" href="style/style.scss">
     <title>Document</title>
 </head>
-<body>
-<main data-router-wrapper>
-    <section data-router-view="bio" class="bio">
-        <div class="bio-container">
-            <div class="bio-aside">
-                <p class="bio-title">
-                    <span class="h"><span class="iam">i'm</span> vincent</span>
-                    <span class="h">vermeersch</span>
-                </p>
-                <p class="bio-description">
-                    <span class="h">I’m a French front-end developer based in Lille and</span>
-                    <span class="h">I love building useful and creative interfaces.</span>
-                    <span class="h">I can speak many languages like,</span>
-                    <span class="h">HTML5, CSS, Javascript, PHP, Java Android.</span>
-                    <span class="h">I can speak if needed with API and others back features.</span>
-                </p>
+
+<body style="overflow: hidden">
+    <nav class="nav-container light">
+        <ul class="nav-list">
+            <li><a class="nav-link is-active" href="./bio.html">BIO</a></li>
+            <li><a class="nav-link" href="./">WORK</a></li>
+            <li><a class="nav-link" href="./contact.html">CONTACT</a></li>
+        </ul>
+    </nav>
+    <main data-router-wrapper>
+        <section data-router-view="bio" class="bio">
+            <div class="bio-container">
+                <div class="bio-image"></div>
+                <div class="bio-aside">
+                    <p class="bio-title">
+                        <span class="h"><span class="iam">I'm</span> vincent</span>
+                        <span class="h">vermeersch</span>
+                    </p>
+                    <p class="bio-description">
+                        <span class="h">French developer based in Lille.</span>
+                        <span class="h">I love building useful and creative interfaces.</span>
+                        <span class="h">I can speak many languages like,</span>
+                        <span class="h">HTML5, CSS, Javascript, PHP, Java Android.</span>
+                        <span class="h">I can speak if needed with API and others back features.</span>
+                    </p>
+                </div>
             </div>
-            <div class="bio-image"></div>
-        </div>
-        <div class="btn-project">
-            <a class="btn-new-project" href="#">new project ?</a>
-            <span class="animate-text">hire me - hire me - hire me - </span>
-        </div>
-    </section>
-</main>
-<script id="main-script" src="./js/index.js"></script>
+            <div class="btn-project">
+                <a class="btn-new-project" href="mailto:vincent.vermeersch2@gmail.com">new project ?</a>
+                <span class="animate-text">hire me - hire me - hire me - </span>
+            </div>
+        </section>
+    </main>
 </body>
+
 </html>

@@ -1,6 +1,7 @@
 .bio {
   background: black;
   color: #E8E6DE;
+  padding: 50px;
 
   .bio-container {
     width: 100%;
@@ -12,6 +13,7 @@
       display: flex;
       flex-flow: nowrap column;
       flex: 1;
+      order: -1;
       justify-content: center;
       margin-right: 4vw;
       text-align: end;

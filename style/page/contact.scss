@@ -6,6 +6,7 @@
 }
 
 .contact {
+  padding: 50px;
   background: black;
   color: #E8E6DE;
   width: 100%;
@@ -17,7 +18,7 @@
 
   .contact-container {
 
-    p.contact-description {
+    p.contact-title {
       letter-spacing: -.025em;
       text-transform: uppercase;
       text-align: end;
@@ -27,7 +28,7 @@
         display: block;
         overflow: hidden;
         font-family: Hanson, sans-serif;
-        margin: -2vw 0 0;
+        margin: -1.7vw 0 0;
         line-height: 5vw;
 
         .get {
@@ -40,7 +41,7 @@
       }
     }
 
-    p.contact-info {
+    p.contact-description {
       margin: 1.8229166666666667vw 0 0 0;
 
       > .h {

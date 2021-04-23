@@ -1,21 +1,28 @@
 {
-    "name": "my-portfolio",
-    "version": "1.0.0",
-    "description": "",
-    "main": "index.js",
-    "scripts": {
-        "dev": "parcel index.html",
-        "test": "echo \"Error: no test specified\" && exit 1"
-    },
-    "author": "",
-    "license": "ISC",
-    "dependencies": {
-        "@dogstudio/highway": "^2.2.1",
-        "charming": "^3.0.2",
-        "gsap": "file:gsap-bonus.tgz",
-        "parcel-bundler": "^1.12.4"
-    },
-    "devDependencies": {
-        "sass": "^1.32.6"
-    }
+  "name": "my-portfolio",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "parcel index.html --open",
+    "share": "ngrok http 1234",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@dogstudio/highway": "^2.2.1",
+    "charming": "^3.0.2",
+    "gsap": "file:gsap-bonus.tgz",
+    "locomotive-scroll": "^4.1.1",
+    "parcel-bundler": "^1.12.4"
+  },
+  "devDependencies": {
+    "parcel-plugin-static-files-copy": "^2.6.0",
+    "sass": "^1.32.6"
+  },
+  "staticFiles": {
+    "staticPath": "static",
+    "staticOutDir": "images"
+  }
 }
