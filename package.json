@@ -1,27 +1,28 @@
 {
-  "name": "my-portfolio",
+  "name": "nuxt-portfolio",
   "version": "1.0.0",
-  "description": "",
+  "private": true,
   "scripts": {
-    "dev": "parcel ./src/views/index.html --open",
-    "share": "ngrok http 1234",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate"
   },
-  "author": "",
-  "license": "ISC",
   "dependencies": {
-    "@dogstudio/highway": "^2.2.1",
     "charming": "^3.0.2",
+    "core-js": "^3.9.1",
     "gsap": "file:gsap-bonus.tgz",
-    "locomotive-scroll": "^4.1.1",
-    "parcel-bundler": "^1.12.4"
+    "nuxt": "^2.15.3",
+    "vue-slick-carousel": "^1.0.6"
   },
   "devDependencies": {
-    "parcel-plugin-static-files-copy": "^2.6.0",
-    "sass": "^1.32.6"
-  },
-  "staticFiles": {
-    "staticPath": "./src/assets/static",
-    "staticOutDir": "images"
+    "@nuxt/types": "^2.15.3",
+    "@nuxt/typescript-build": "^2.1.0",
+    "eslint-config-prettier": "^8.1.0",
+    "eslint-plugin-prettier": "^3.3.1",
+    "fibers": "^5.0.0",
+    "prettier": "^2.2.1",
+    "sass": "^1.32.11",
+    "sass-loader": "^10.1.1"
   }
 }
