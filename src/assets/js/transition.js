@@ -2,6 +2,7 @@ import Highway from '@dogstudio/highway';
 import BioTransition from './page_transition/bioTransition';
 import HomeTransition from './page_transition/homeTransition';
 import ContactTransition from './page_transition/contactTransition';
+import WorkTransition from './page_transition/workTransition';
 import {gsap} from "gsap";
 import BioRender from "./render/bioRender";
 import DefaultRender from "./render/defaultRender";
@@ -23,12 +24,14 @@ const H = new Highway.Core({
     renderers: {
         bio: BioRender,
         home: DefaultRender,
-        contact: DefaultRender
+        contact: DefaultRender,
+        work: DefaultRender
     },
     transitions: {
         home: HomeTransition,
         bio: BioTransition,
-        contact: ContactTransition
+        contact: ContactTransition,
+        work: WorkTransition
     }
 });
 
