@@ -12,6 +12,13 @@ export default {}
 </script>
 
 <style lang="scss">
+#app {
+  overflow: hidden;
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+}
+
 main section {
   position: absolute;
   height: 100vh;
@@ -37,7 +44,7 @@ body {
   }
 }
 
-body:before {
+#app:before {
   z-index: 9;
   height: 200%;
   width: 200%;
@@ -116,6 +123,10 @@ $heightNavBar: 8vh;
   body .home-content,
   body .bio {
     padding: 0;
+  }
+
+  #app {
+    overflow: hidden;
   }
 
   section.home .home-content,
@@ -199,7 +210,7 @@ $heightNavBar: 8vh;
 
   // navigation mobile part
   nav.nav-container {
-    position: fixed;
+    position: absolute;
     height: $heightNavBar;
     width: 100vw;
     background: black;
