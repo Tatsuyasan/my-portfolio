@@ -32,7 +32,7 @@
       </div>
       <div class="buttons-projects">
         <i @click="prev" class="fas fa-arrow-left"></i>
-        <i @click="next" class="fas fa-arrow-right"></i>
+        <i v-if="hasNextSlide" @click="next" class="fas fa-arrow-right"></i>
       </div>
       <div class="container-preview">
         <div class="preview">
@@ -94,6 +94,8 @@ export default {
       c2: undefined,
       c3: undefined,
       currentSlide: '01',
+      hasNextSlide: true,
+      numberProjects: 0,
       settingsC1: {
         dots: false,
         arrows: false,
@@ -115,6 +117,7 @@ export default {
         verticalSwiping: true,
       },
       settingsC3: {
+        lazyLoad: 'ondemand',
         dots: false,
         arrows: false,
         draggable: false,
@@ -138,9 +141,9 @@ export default {
       this.c3.prev()
     },
     beforeChange(oldSlide, newSlide) {
+      console.log('before changed')
       if (projects[oldSlide].movieUrl) {
-        const oldContent = this.c3.$el.querySelector('.slick-current')
-        const movie = oldContent.querySelector('video')
+        const movie = this.c3.$el.querySelector('.slick-current video')
         if (movie) {
           movie.pause()
           movie.currentTime = 0
@@ -151,11 +154,12 @@ export default {
       current >= 10
         ? (this.currentSlide = '' + current)
         : (this.currentSlide = '0' + current)
+
+      this.hasNextSlide = this.numberProjects <= current ? false : true
     },
     afterChange(currentSlide) {
       if (projects[currentSlide].movieUrl) {
-        const content = this.c3.$el.querySelector('.slick-current')
-        const movie = content.querySelector('video')
+        const movie = this.c3.$el.querySelector('.slick-current video')
         if (movie) {
           movie.play()
         }
@@ -166,6 +170,7 @@ export default {
     this.c1 = this.$refs.c1
     this.c2 = this.$refs.c2
     this.c3 = this.$refs.c3
+    this.numberProjects = this.projects.length
   },
 }
 </script>
@@ -192,11 +197,13 @@ export default {
       top: 40%;
       left: 50%;
       transform: translateX(-50%);
+      width: 100px;
+      display: flex;
+      justify-content: space-between;
 
       i {
         z-index: 999;
         cursor: pointer;
-        margin: 0 25px;
         color: white;
         font-size: 25px;
       }
