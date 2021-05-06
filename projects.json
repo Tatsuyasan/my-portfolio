@@ -1,22 +1,14 @@
 [
   {
-    "title": "Amthieu - Portfolio",
-    "description": "A little project which has challenge me with thoses hover typo effect",
-    "movieUrl": "../assets/images/coming_soon.gif"
+    "title": "Mathieu - coming soon",
+    "description": "A small project that challenged me with these hover typo effects",
+    "for": "Mathieu",
+    "movieUrl": "Coming_soon_movies"
   },
   {
-    "title": "example glossary",
-    "description": "Some description",
-    "movieUrl": "yoyoyoy"
-  },
-  {
-    "title": "example glossary",
-    "description": "Some description",
-    "movieUrl": "yoyoyoy"
-  },
-  {
-    "title": "example glossary",
-    "description": "Some description",
-    "movieUrl": "yoyoyoy"
+    "title": "You - your project",
+    "description": "I'm waiting for you....",
+    "for": "You",
+    "movieUrl": ""
   }
 ]
