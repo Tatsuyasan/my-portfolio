@@ -1,5 +1,7 @@
 # nuxt-portfolio
 
+In progress => https://tecnniv-portfolio.netlify.app/
+
 ## Build Setup
 
 ```bash
